@@ -5,15 +5,18 @@ import java.util.Scanner;
 public class sum_without_arithmetic_operation {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		int start = (int)System.currentTimeMillis();
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int carry = a&b;
-		int sum = a^b;
-		while(carry>0){
-			int shift = carry<<1;
-			carry = carry & shift;
-			sum = sum ^ shift;
+		while(b!=0){
+			int carry = a&b;
+			a = a^b;
+			b = carry<<1;
 		}
-		System.out.println(sum);
+		System.out.println(a);
+		int end = (int)System.currentTimeMillis();
+		System.out.println("Time taken :"+(end - start));
 	}
+
+
 }

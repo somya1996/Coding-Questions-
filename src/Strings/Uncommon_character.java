@@ -26,12 +26,14 @@ public class Uncommon_character {
 				arr.add(A.charAt(i));
 			}
 		}
+		System.out.println(arr);
 
 		for(int i=0;i<B.length();i++){
 			if(!brr.contains(B.charAt(i))){
 				brr.add(B.charAt(i));
 			}
 		}
+		System.out.println(brr);
 
 		int size=brr.size();
 		for(int i=0;i<size;i++){
@@ -43,6 +45,9 @@ public class Uncommon_character {
 				i--;
 			}
 		}
+		System.out.println(" After removing similar elements: ");
+		System.out.println(arr);
+		System.out.println(brr);
 
 		for(int i=0;i<arr.size();i++){
 			temp.add(arr.get(i));
