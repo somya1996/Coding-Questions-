@@ -1,9 +1,6 @@
 package Strings;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class Uncommon_character {
 	public static void main(String[] args) {
@@ -11,10 +8,40 @@ public class Uncommon_character {
 		String s1 = sc.nextLine().toLowerCase();
 		String s2 = sc.nextLine().toLowerCase();
 		Uncommon_character uc = new Uncommon_character();
-		String res = uc.UncommonChars(s1,s2);
-		System.out.println(res);
+		//String res = uc.UncommonChars(s1,s2);
+		//System.out.println(res);
+		String ans = UncommonString(s1,s2);
+		System.out.println(ans);
 	}
-	public  String UncommonChars(String A, String B)
+
+	public static String UncommonString(String A, String B) {
+
+		String result = "";
+
+		for(int i=0;i<A.length();i++){
+			if (!B.contains(String.valueOf(A.charAt(i))) && (!result.contains(String.valueOf(A.charAt(i))))) {
+				result += A.charAt(i);
+			}
+		}
+		System.out.println(result);
+		for(int i=0;i<B.length();i++){
+			if (!A.contains(String.valueOf(B.charAt(i))) && (!result.contains(String.valueOf(B.charAt(i))))) {
+				result += B.charAt(i);
+			}
+		}
+		System.out.println(result);
+		String ans = "";
+
+		char[] res = result.toCharArray();
+		Arrays.sort(res);
+		for(int i=0;i<res.length;i++){
+			ans += res[i];
+		}
+		System.out.println(ans);
+		return ans;
+	}
+
+	/*public  String UncommonChars(String A, String B)
 	{
 		String result="";
 		ArrayList<Character> arr=new ArrayList<>();
@@ -65,6 +92,5 @@ public class Uncommon_character {
 
 		if(result.length()==0)return "-1";
 
-		return result;
-	}
+	}*/
 }
