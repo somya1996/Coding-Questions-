@@ -18,13 +18,13 @@ public class Uncommon_character {
 
 		String result = "";
 
-		for(int i=0;i<A.length();i++){
+		for (int i = 0; i < A.length(); i++) {
 			if (!B.contains(String.valueOf(A.charAt(i))) && (!result.contains(String.valueOf(A.charAt(i))))) {
 				result += A.charAt(i);
 			}
 		}
 		System.out.println(result);
-		for(int i=0;i<B.length();i++){
+		for (int i = 0; i < B.length(); i++) {
 			if (!A.contains(String.valueOf(B.charAt(i))) && (!result.contains(String.valueOf(B.charAt(i))))) {
 				result += B.charAt(i);
 			}
@@ -34,12 +34,13 @@ public class Uncommon_character {
 
 		char[] res = result.toCharArray();
 		Arrays.sort(res);
-		for(int i=0;i<res.length;i++){
+		for (int i = 0; i < res.length; i++) {
 			ans += res[i];
 		}
 		System.out.println(ans);
 		return ans;
 	}
+
 
 	/*public  String UncommonChars(String A, String B)
 	{
