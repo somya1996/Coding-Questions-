@@ -1,8 +1,8 @@
 package Strings;
 import java.util.Scanner;
 
-//1. Prakhar Aggrawal, 2. Manish Kumar Rai, 3. Rishabh Gupta56
-
+//1. Prakhar Aggrawal, 2. Manish Kumar Rai, 3. Rishabh Gupta56    // Output: 1 2 3 56
+//2. 1.hello34 2.67world34   //Output: 1 34 2 67 34
 public class Extract_the_integer {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
