@@ -23,8 +23,8 @@ public class Checkrotation {
 			return false;
 		}
 		/*else if(!s1.equals(s2))
-			flag =  false;*/
-		else if(s1.equals(s2))
+			flag =  false;*/2
+		if(s1.equals(s2))
 			flag = true;
 		else {
 			int l = s1.length();
