@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class sum_without_arithmetic_operation {
 	public static void main(String[] args) {
+		// one way is using loop
+		/*for(int i=0;i<b;i++){
+			a++;
+		}*/
+		//other way using bit manipulation
 		Scanner sc = new Scanner(System.in);
 		int start = (int)System.currentTimeMillis();
 		int a = sc.nextInt();
