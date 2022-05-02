@@ -1,5 +1,17 @@
 package Strings;
+/*
+Given a string str containing alphanumeric characters. The task is to calculate the sum of all the
+numbers present in the string.
 
+Example 1:
+
+Input:
+str = 1abc23
+Output: 24
+Explanation: 1 and 23 are numbers in the
+string which is added to get the sum as
+24.
+*/
 import java.util.Scanner;
 
 public class Sum_of_digit_in_no {
