@@ -1,7 +1,5 @@
 package Strings;
 
-import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 import java.util.HashMap;
 
@@ -51,4 +49,5 @@ public class Anagram_check {
 			return true;
 		return false;
 	}
+
 }

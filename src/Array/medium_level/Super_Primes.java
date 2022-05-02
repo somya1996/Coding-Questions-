@@ -1,5 +1,16 @@
 package Array.medium_level;
+//A prime number is Super Prime if it is a sum of two primes. Find all the Super Primes upto N
+/*
+Input:
+N = 5
+Output: 1
+Explanation: 5 = 2 + 3, 5 is the only super prime
 
+Input:
+N = 10
+Output: 2
+Explanation: 5 and 7 are super primes
+ */
 import java.util.Scanner;
 import java.util.ArrayList;
 
