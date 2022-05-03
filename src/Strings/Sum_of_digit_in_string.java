@@ -14,7 +14,7 @@ string which is added to get the sum as
 */
 import java.util.Scanner;
 
-public class Sum_of_digit_in_no {
+public class Sum_of_digit_in_string {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
