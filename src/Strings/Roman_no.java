@@ -2,14 +2,14 @@ package Strings;
 
 import java.util.Scanner;
 
-public class Binary_no {
+public class Roman_no {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		System.out.println(Binary_digit(n));
+		System.out.println(Roman_digit(n));
 	}
 
-	public static String Binary_digit(int n) {
+	public static String Roman_digit(int n) {
 		String s = "";
 		String m[] = {"","M","MM","MMM"};
 		String c[] = {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
