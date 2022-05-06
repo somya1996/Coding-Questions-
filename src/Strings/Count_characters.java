@@ -25,12 +25,17 @@ public class Count_characters {
 		int n = sc.nextInt();
 		int c[] = new int[256];
 		Arrays.fill(c,0);
-		for(int i=0; i<s.length(); i++){
-			c[s.charAt(i)-'0']++;
+		char w[] = s.toCharArray();
+		char prev = ' ';
+		for(int i=0; i<w.length; i++){
+			if(prev!=w[i]) {
+				c[w[i] - '0']++;
+				prev = w[i];
+			}
 		}
-		/*for(int i=0; i<c.length; i++){
+		for(int i=0; i<c.length; i++){
 			System.out.print(c[i]+" ");
-		}*/
+		}
 		System.out.println();
 		int count = 0;
 		for(int i=0; i<c.length; i++){
