@@ -1,7 +1,15 @@
 package Array.medium_level.prefix_sum;
 
 import java.util.Scanner;
+/*
+Given an array, arr[] of size N, the task is to find the count of array indices such that removing an element from
+these indices makes the sum of even-indexed and odd-indexed array elements equal.
+Input 1:                           Output 1:
+A=[2, 1, 6, 4]                     1
+Input 2:                           Output 2:
+A=[1, 1, 1]                        3
 
+*/
 public class By_removing_make_even_odd_sum {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
