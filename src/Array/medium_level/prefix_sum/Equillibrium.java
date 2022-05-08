@@ -31,7 +31,9 @@ public class Equillibrium {
 		System.out.println();
 		System.out.println(arr[k]);
 		*/
-		// other way
+		// other way using (left_sum of an element == right_sum of an element)
+		//Time complexity : O(n)
+		//Space complexity: O(1)
 		int total_sum = 0;
 		int ans = 0;
 		for(int i=0; i<n; i++){
