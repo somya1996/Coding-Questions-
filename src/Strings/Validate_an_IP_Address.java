@@ -14,21 +14,34 @@ public class Validate_an_IP_Address {
 	}
 
 	public static boolean isValid(String s) {
-		String words[] = s.split("\\.");
+		int dot = 0;
+		for(int i=0;i<s.length();i++)
+			if(s.charAt(i)=='.')
+				dot++;
+		if(dot>3 || dot<3)
+			return false;
 
-		if (words.length != 4) {
+		String x[] = s.split("\\.");
+		if (x.length != 4) {
 			return false;
 		}
+		for(int i=0;i<x.length;i++){
+				if(!isNumbers(x[i]))
+					return false;
+				if(x[i].length()>3)
+					return false;
+				else if(x[i].equals("") || !(x[i].length()<=3 && Integer.parseInt(x[i])<=255))
+					return false;
 
-		for (int i = 0; i < words.length; i++) {
-			if (words[i].length() > 3)
-				return false;
-			if (Integer.parseInt(words[i]) <= 0 && Integer.parseInt(words[i]) >= 255)
-				return false;
+				if((x[i].charAt(0)=='0' && x[i].length()>1) || (Integer.parseInt(x[i])==0 && x[i].length()>1))
+					return false;
+		}
+		return true;
+	}
 
-			if ((Integer.parseInt(words[i]) == 0 && words[i].length() > 1) || (words[i].charAt(0) == '0' && words[i].length() > 1))
-				return false;
-			else if(words[i].equals("") || !(words[i].length()<=3 && Integer.parseInt(words[i])<=255))
+	public static boolean isNumbers(String s) {
+		for (int i = 0; i < s.length(); i++) {
+			if (!(s.charAt(i) >= '0' && s.charAt(i) <= '9'))
 				return false;
 		}
 		return true;
