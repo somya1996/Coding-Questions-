@@ -18,10 +18,8 @@ public class Christmas_tree {
 		System.out.println(ans);
 	}
 	public static int solve(int[] A, int[] B) {
-
 		int mincost = Integer.MAX_VALUE;
 		for(int q=1 ; q<A.length-1; q++){
-
 			int minLcost = Integer.MAX_VALUE;
 			for(int p = 0; p<q; p++){
 				if(A[p] < A[q]){
