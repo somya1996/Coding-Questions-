@@ -37,12 +37,17 @@ public class Minimize_the_height_2 {
 		int max = arr[n-1];
 		int height = arr[n-1]-arr[0];
 
-		for(int i=1; i<n; i++){  // Nou iterating each element and checking its max and min value to get the min height distance
+		for(int i=1; i<n-1; i++){  // Nou iterating each element and checking its max and min value to get the min height distance
 			if(arr[i]-k <0 )
 				continue;
+			System.out.println(arr[i]);
 			min = Math.min(arr[0]+k , arr[i]-k);
+			//int a = arr[i]-k;
+			//System.out.println(" min "+a+" "+min);
 			max = Math.max(arr[n-1]-k , arr[i-1]+k);
-			height = Math.min(height , max-min);
+			//int b = arr[i-1]+k;
+			//System.out.println(" max "+b+" "+max);
+			height = Math.min(height , max-min); // for every value its checking the min value of height
 		}
 		return height;
 	}
