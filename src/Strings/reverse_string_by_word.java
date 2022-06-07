@@ -14,29 +14,20 @@ public class reverse_string_by_word {
 		for(int i=s.length()-1; i>=0; i--){
 			ans += s.charAt(i);
 		}
-		//System.out.println("ans :"+ans);
 		char c[] = ans.toCharArray();
-		/*for(int i=0; i<c.length; i++){
-			System.out.print(c[i]);
-		}*/
-		//System.out.println();
-		int st = 0 ;
-		for (int e = 0; e < c.length; e++){
-			if(c[e] == ' '){
-				reverse_String(c , st , e-1);
-				st = e+1;
+		int st = 0 , e = 0;
+		while(st< c.length){
+			while(e<c.length && c[e]!=' '){
+				e++;
 			}
+			if(st < e){
+				reverse_String(c , st , e-1);
+			}
+			st = e+1;
+			e = st;
 		}
-		reverse_String(c , st , c.length-1);
 
-		/*for(int i=0; i<c.length; i++){
-			System.out.print(c[i]);
-		}*/
-		/*String fa = "";
-		for(int i=0; i<c.length; i++){
-			fa += c[i];
-		}*/
-		return String.valueOf(c);
+		return String.valueOf(c).trim();
 	}
 	public static void reverse_String(char[] c , int start , int end){
 		while (start <= end){
