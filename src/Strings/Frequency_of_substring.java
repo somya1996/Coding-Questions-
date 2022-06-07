@@ -17,6 +17,7 @@ public class Frequency_of_substring {
 		for(int i=0; i<=T-P; i++){
 			int j;
 			for(j=0; j<P; j++){
+				System.out.println("i "+i+" j "+j);
 				if(txt.charAt(i+j) != pat.charAt(j))
 					break;
 			}
