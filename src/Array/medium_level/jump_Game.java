@@ -2,7 +2,7 @@ package Array.medium_level;
 
 import java.util.Scanner;
 
-public class Minimum_number_of_jumps {
+public class jump_Game {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
