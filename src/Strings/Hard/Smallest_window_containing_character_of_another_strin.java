@@ -42,7 +42,7 @@ public class Smallest_window_containing_character_of_another_strin {
 				len = r - l;
 				ans = s.substring(l, r);
 			}
-			while (l < r && count == 0) {
+			while (l < r && count <= 0) {
 				if (hm.containsKey(s.charAt(l))) {
 					hm.put(s.charAt(l), hm.get(s.charAt(l)) + 1);
 					if (hm.get(s.charAt(l)) == 1)
