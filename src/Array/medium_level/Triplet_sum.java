@@ -1,6 +1,8 @@
 package Array.medium_level;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Triplet_sum {
@@ -17,7 +19,7 @@ public class Triplet_sum {
 	}
 	public static boolean find3Numbers(int A[], int n, int X) {
 		// iterating each elements and applying sliding window on rest elements
-		Arrays.sort(A);
+		/*Arrays.sort(A);
 		for(int i=0; i<n-2; i++){
 			int s = i+1;
 			int e = n-1;
@@ -30,6 +32,19 @@ public class Triplet_sum {
 				}
 				else{
 					e--;
+				}
+			}
+		}
+		return false;*/
+		for(int i=0; i<n-2; i++){
+			int curr_sum = X-A[i];
+			HashSet<Integer> hs = new HashSet<>();
+			//hs1.clear();
+			for(int j = i+1; j<n; j++){
+				if(hs.contains(curr_sum - A[j]))
+					return true;
+				else{
+					hs.add(A[j]);
 				}
 			}
 		}
