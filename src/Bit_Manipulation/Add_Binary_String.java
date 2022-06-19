@@ -18,7 +18,7 @@ public class Add_Binary_String {
 			int x = (i < 0) ? 0:Character.getNumericValue(a.charAt(i));
 			int y = (j < 0) ? 0:Character.getNumericValue(b.charAt(j));
 			sum = carry + x + y;
-			System.out.println(" x " + x + " y " + y + " sum " + sum);
+			System.out.println(" x " + x + " y " + y + " `sum` " + sum);
 			res = (sum % 2) + res;
 			carry = sum / 2;
 			i--;
