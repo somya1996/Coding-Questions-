@@ -13,7 +13,7 @@ public class Count_total_set_bit {
 	}
 	public static int countSetBits(int n){
 		/*int count2 = 0;
-		// This takes O(n2)
+		// This takes O(nlog(max))  max is 32 bit(bit for binary representation)
 		for(int i=1; i<=n; i++){
 			int count = 0 ;
 			int a = i;
