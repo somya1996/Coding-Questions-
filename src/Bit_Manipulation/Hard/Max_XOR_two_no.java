@@ -1,4 +1,4 @@
-package Bit_Manipulation;
+package Bit_Manipulation.Hard;
 
 import java.util.HashSet;
 import java.util.Scanner;
