@@ -14,11 +14,15 @@ public class Reverse_an_array {
 		//reverse(0 , arr , n-1);
 
 		// functional
-		reverse(0 , arr);
+		/*reverse(0 , arr);
 		for(int i=0; i<n; i++){
 			System.out.print(arr[i]+" ");
-		}
+		}*/
+
+		// one more
+		reverse(0 , arr);
 	}
+
 	// using parameterized recursion
 	/*public static void reverse(int l , int[] arr ,  int r){
 		if(l>=r)
@@ -28,13 +32,22 @@ public class Reverse_an_array {
 		arr[r] = temp;
 		reverse(l+1 , arr , r-1);
 	}*/
+
 	// using functional recursion
-	public static void reverse(int i , int[] arr){
+	/*public static void reverse(int i , int[] arr){
 		int n = arr.length;
 		if(i >= n/2)
 			return;
 		swap(i , n-i-1 , arr);
 		reverse(i+1 , arr);
+	}*/
+
+	// but using this method we are not changing array only printing in reverse order
+	public static void reverse(int i , int [] arr){
+		if(i>arr.length-1)
+			return;
+		reverse(i+1 , arr);
+		System.out.print(arr[i]+" ");
 	}
 	public static void swap(int i , int j , int[] arr){
 		int temp = arr[i];
