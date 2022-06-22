@@ -16,7 +16,8 @@ public class Printing_subsequence_whose_sum_is_K {
 		ArrayList<Integer>al = new ArrayList<>();
 		subsequence_sum(0 , arr , al , n , k , 0);
 	}
-	public static void subsequence_sum(int idx , int[]arr , ArrayList<Integer> al , int n , int k , int sum){
+	// printing all subssequence whose sum is sum
+	/*public static void subsequence_sum(int idx , int[]arr , ArrayList<Integer> al , int n , int k , int sum){
 		if(idx == n){
 			if (sum == k) {
 				//if (al.size() > 0)
@@ -35,5 +36,29 @@ public class Printing_subsequence_whose_sum_is_K {
 		al.remove(al.size()-1);
 		sum -= arr[idx];
 		subsequence_sum(idx+1,arr,al,n,k,sum);
+	}*/
+
+	// print only one subsequence as ans whose sum is equal to given sum
+	public static boolean subsequence_sum(int idx , int[]arr , ArrayList<Integer> al , int n , int k , int sum) {
+		if (idx == n) {
+			if (sum == k){
+				for (int x : al) {
+					System.out.print(x + " ");
+				}
+				System.out.println();
+				return true;
+			}
+			return false;
+		}
+
+		al.add(arr[idx]);
+		sum += arr[idx];
+		if(subsequence_sum(idx + 1, arr, al, n, k, sum) == true)
+			return true;
+		al.remove(al.size() - 1);
+		sum -= arr[idx];
+		if(subsequence_sum(idx + 1, arr, al, n, k, sum) == true)
+			return true;
+		return false;
 	}
 }
