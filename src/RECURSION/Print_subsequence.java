@@ -27,7 +27,7 @@ public class Print_subsequence {
 		}
 		al.add(arr[index]);//including current index
 		subsequence(index+1 , arr , al , n);
-		al.remove(al.get(al.size()-1));// exclusing current index
+		al.remove(al.size()-1);// exclusing current index
 		subsequence(index+1,arr , al , n);
 	}
 	// TIME COMPLEXITY - Here for every index value there are two options take and not take so forn index (2^n)*n
