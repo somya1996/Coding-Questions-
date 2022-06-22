@@ -30,8 +30,8 @@ public class Print_subsequence {
 		al.remove(al.get(al.size()-1));// exclusing current index
 		subsequence(index+1,arr , al , n);
 	}
-	// TIME COMPLEXITY - Here for every index value there are two options take and not take so forn index - 2^n
-	//                    O(2^n)(Take and not take two types)
+	// TIME COMPLEXITY - Here for every index value there are two options take and not take so forn index (2^n)*n
+	//                    O(2^n)(Take and not take two types)*n (to print elements in arraylist)
 	//                         Recursion tree
 	/*                              [3 1 2]
 									f(0,[])
