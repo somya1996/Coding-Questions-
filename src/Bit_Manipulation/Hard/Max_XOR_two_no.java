@@ -11,8 +11,8 @@ public class Max_XOR_two_no {
 		for(int i=0; i<n; i++){
 			arr[i] = sc.nextInt();
 		}
-		int count = MAx_XOR_Pair(arr , n);
-		System.out.println(count);
+		int ans = MAx_XOR_Pair(arr , n);
+		System.out.println(ans);
 	}
 	public static int MAx_XOR_Pair(int arr[] , int n){
 		int mask = 0 , ans = 0;
@@ -22,7 +22,9 @@ public class Max_XOR_two_no {
 			for(int i=0; i<n; i++){
 				hs.add(mask&arr[i]);
 			}
+			//System.out.println(hs);
 			int newmax = ans|(1<<bit);
+			//System.out.println(newmax);
 			for(int prefix : hs){
 				if(hs.contains(newmax^prefix)){
 					ans = newmax;
