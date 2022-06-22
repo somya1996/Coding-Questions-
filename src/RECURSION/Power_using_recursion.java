@@ -10,9 +10,18 @@ public class Power_using_recursion {
 		int ans = power(a,n);
 		System.out.println(ans);
 	}
-	public static int power(int a , int n){
+	/*public static int power(int a , int n){
 		if(n==0)
 			return 1;
 		return a*power(a,n-1);
+	}*/
+	public static int power(int a , int n){
+		if(n == 0)
+			return 1;
+		else if(n % 2 == 0)
+			return power(a*a,n/2);
+		else{
+			return  a*power(a*a , (n-1)/2);
+		}
 	}
 }
