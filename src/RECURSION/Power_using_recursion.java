@@ -16,6 +16,7 @@ public class Power_using_recursion {
 		return a*power(a,n-1);
 	}*/
 	public static int power(int a , int n){
+		/*
 		if(n == 0)
 			return 1;
 		else if(n % 2 == 0)
@@ -23,5 +24,14 @@ public class Power_using_recursion {
 		else{
 			return  a*power(a*a , (n-1)/2);
 		}
+		*/
+
+		if(n == 0)
+			return 1;
+		int res = power(a , n/2);
+		int ans = res*res;
+		if(n%2 == 1)
+			ans = a*res*res;
+		return ans;
 	}
 }
