@@ -30,7 +30,7 @@ public class combinational_sum_II {
 		}
 
 		// taking elements
-		int prev = 0;
+		/*int prev = 0;
 		if(target >= candidate[idx] && candidate[idx]!= prev) {
 			prev = candidate[idx];
 			ds.add(candidate[idx]);
@@ -38,6 +38,13 @@ public class combinational_sum_II {
 			ds.remove(ds.size()-1);
 		}
 		// not taking element jumping to next index value
-		combinationalSum2(idx+1 , candidate , target , ans , ds);
+		combinationalSum2(idx+1 , candidate , target , ans , ds);*/
+		for (int i = idx; i < candidate.length; i++) {
+			if(i > idx && candidate[i] == candidate[i-1])
+				continue; /** skip duplicates */
+			ds.add(candidate[i]);
+			combinationalSum2(idx+1, candidate, target - candidate[idx], ans, ds);
+			ds.add(candidate[i]);
+		}
 	}
 }
