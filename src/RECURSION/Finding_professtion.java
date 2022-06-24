@@ -14,10 +14,22 @@ public class Finding_professtion {
 			System.out.println("Engineers");
 	}
 	static char profession(int level, int pos){
+		// Main working : Going in reverse direction to check what will be its parent profession
+		/*
+			if E then at [odd - E  , even - D]
+			if D then at [odd - D  , even - E]
+			to get its parent node we'll do (pos+1)/2
+		*/
+		//Base case
 		if(level == 1)
 			return 'e';
-		if(profession(level -1 , (pos+1)/2) == 'd')
-			return (pos%2 > 0 ? 'd':'e');
-		return(pos%2 >0 ? 'e':'d');
+		if(profession(level -1 , (pos+1)/2)=='d') {
+			System.out.println("if "+" level "+level + " pos "+ pos);
+			return (pos % 2 > 0 ? 'd' : 'e');
+		}
+		else {
+			System.out.println("else "+ "level "+ level +" pos "+ pos);
+			return (pos % 2 > 0 ? 'e' : 'd');
+		}
 	}
 }
