@@ -17,5 +17,10 @@ public class Stacktest {
 			System.out.println(x);
 			s.pop();
 		}
+
+		Stack<Integer> mystack = new Stack<Integer>();
+		mystack.push(5);
+		mystack.push(7);
+		System.out.println(mystack.peek());
 	}
 }
