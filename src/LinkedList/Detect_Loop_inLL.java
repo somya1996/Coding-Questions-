@@ -30,7 +30,8 @@ public class Detect_Loop_inLL {
 		}
 		return false;
 	}
-
+	//other way
+	/*
 	public static boolean detectLoop(Node head){
 		Node slow = head;
 		Node fast = head;
@@ -41,5 +42,22 @@ public class Detect_Loop_inLL {
 				return true;
 		}
 		return false;
+	}
+	*/
+	public static void main(String[] args) {
+		Detect_Loop_inLL llist = new Detect_Loop_inLL();
+
+		llist.push(20);
+		llist.push(4);
+		llist.push(15);
+		llist.push(10);
+
+		/*Create loop for testing */
+		llist.head.next.next.next.next = llist.head;
+
+		if (detectLoop(head)) {
+			System.out.println("Loop found");
+		} else
+			System.out.println("No Loop");
 	}
 }
