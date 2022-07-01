@@ -22,6 +22,7 @@ public class Reverse_LL {
 		System.out.println();
 	}
 	public static Node reverseLL(Node head){
+		/*
 		Node temp1 = head;
 		Node temp2 = temp1.next;
 		head.next = null ;
@@ -33,7 +34,19 @@ public class Reverse_LL {
 			temp1 = temp2;
 		}
 
-		return head;
+		return head;*/
+		Node current = head;
+		Node previous = null;
+		Node next = null;
+
+		while (current != null)
+		{
+			next = current.next;
+			current.next = previous;
+			previous = current;
+			current = next;
+		}
+		return previous;
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
