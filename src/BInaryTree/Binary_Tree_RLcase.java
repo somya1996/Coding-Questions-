@@ -32,6 +32,8 @@ public class Binary_Tree_RLcase {
 		this.preOrderprint(root);
 		System.out.println();
 		this.inOrderprint(root);
+		System.out.println();
+		this.postOrderprint(root);
 	}
 	void preOrderprint(Node root){
 		if(root == null)
@@ -47,5 +49,32 @@ public class Binary_Tree_RLcase {
 		inOrderprint(root.left);
 		System.out.print(root.data+" ");
 		inOrderprint(root.right);
+	}
+	void postOrderprint(Node root){
+		if(root == null)
+			return;
+
+		postOrderprint(root.left);
+		postOrderprint(root.right);
+		System.out.print(root.data+" ");
+	}
+
+	int getheight(){
+		return height(root);
+	}
+	int height(Node root){
+		if(root == null)
+			return 0;
+		int l = height(root.left);
+		int r = height(root.left);
+		return Math.max(l , r) + 1;
+	}
+	int sum(){
+		return sum_of_Node(root);
+	}
+	int sum_of_Node(Node root){
+		if(root == null)
+			return 0;
+		return root.data + sum_of_Node(root.left) + height(root.left);
 	}
 }
