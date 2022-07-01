@@ -30,12 +30,22 @@ public class Binary_Tree_RLcase {
 	}
 	void print(){
 		this.preOrderprint(root);
+		System.out.println();
+		this.inOrderprint(root);
 	}
 	void preOrderprint(Node root){
 		if(root == null)
 			return;
-		System.out.println(root.data);
+		System.out.print(root.data+" ");
 		preOrderprint(root.left);
 		preOrderprint(root.right);
+	}
+
+	void inOrderprint(Node root){
+		if(root == null)
+			return;
+		inOrderprint(root.left);
+		System.out.print(root.data+" ");
+		inOrderprint(root.right);
 	}
 }
