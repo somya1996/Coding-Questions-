@@ -28,7 +28,6 @@ public class combinational_sum {
 			}
 			return;
 		}
-
 		// taking elements
 		if(target >= candidate[idx]) {
 			ds.add(candidate[idx]);
