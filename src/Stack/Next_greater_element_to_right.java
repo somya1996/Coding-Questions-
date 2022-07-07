@@ -3,7 +3,7 @@ package Stack;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Next_greater_element {
+public class Next_greater_element_to_right {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
@@ -11,7 +11,7 @@ public class Next_greater_element {
 		for(int i=0; i<n; i++){
 			arr[i] = sc.nextLong();
 		}
-		Next_greater_element ng = new Next_greater_element();
+		Next_greater_element_to_right ng = new Next_greater_element_to_right();
 		long[] ans = ng.nextLargerElement(arr , n);
 		for(int i=0; i< ans.length; i++)
 			System.out.print(ans[i] + " ");
