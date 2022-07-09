@@ -1,4 +1,4 @@
-package Strings;
+package Strings.Medium;
 
 import java.util.HashMap;
 import java.util.HashSet;
