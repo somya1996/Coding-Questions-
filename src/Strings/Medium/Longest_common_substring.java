@@ -17,7 +17,6 @@ public class Longest_common_substring {
 		System.out.println(len1);
 
 	}
-
 	int longestCommonSubstr(String S1, String S2, int n, int m){
 		// one way  Time complexity : O(n^2 + m^2)   Space Complexity : O(n)
 
