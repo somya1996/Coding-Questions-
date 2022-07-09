@@ -2,7 +2,7 @@ package Strings.Medium;
 
 import java.util.Scanner;
 
-public class Longest_pallindrome_MANACHER_ALGO {
+public class Longest_palli_MANACHER_ALGO_LPS {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();

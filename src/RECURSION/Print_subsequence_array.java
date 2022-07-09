@@ -3,7 +3,7 @@ package RECURSION;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Print_subsequence {
+public class Print_subsequence_array {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();

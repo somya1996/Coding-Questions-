@@ -3,7 +3,7 @@ package DP;
 import java.util.Scanner;
 // Time complexity - O(n^2)
 // Space complexity - O(n^2)
-public class Longest_pallindrome {
+public class Longest_pallindrome_susequence_LPS {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
