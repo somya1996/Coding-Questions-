@@ -15,6 +15,30 @@ public class Trapping_Rain_water {
 	}
 
 	public static int total_rain_water_trap(int[] height) {
+		// Time Complexity => O(n) and Space Complexity : O(n)
+        /*
+        int [] left = new int[height.length];
+        int [] right = new int[height.length];
+
+        int n = height.length - 1;
+
+        left[0] = height[0];
+        for(int i=1; i<height.length; i++){
+            left[i] = Math.max(left[i - 1], height[i]);
+
+        }
+        right[n] = height[n];
+        for(int i=height.length-2; i>=0; i--){
+            right[i] = Math.max(right[i + 1], height[i]);
+        }
+        int sum = 0;
+        for(int i=0; i<n ; i++){
+            sum  += Math.min(left[i] , right[i]) - height[i];
+        }
+
+        return sum;
+        */
+
 		//Time complexity : O(n)  ans O(1) Space complexity
 		int n = height.length;
 		int left = 0;
