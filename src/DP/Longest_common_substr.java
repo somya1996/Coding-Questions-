@@ -10,11 +10,11 @@ public class Longest_common_substr {
 		Longest_common_substr lcs = new Longest_common_substr();
 
 
-		int len3 = lcs.bottom_to_top(s1 , s2 , s1.length() , s2.length() ); // using memoization
+		int len3 = lcs.top_to_bottom(s1 , s2 , s1.length() , s2.length() ); // using memoization
 		System.out.println(len3);
 	}
 
-	private int bottom_to_top(String s1, String s2, int n, int m ) {
+	private int top_to_bottom(String s1, String s2, int n, int m ) {
 		int dp[][] = new int[n+1][m+1];
 		int len = 0;
 		for(int i= 0 ; i<n+1; i++){
