@@ -11,9 +11,9 @@ public class Longest_common_subseq {
 		String s1 = sc.nextLine();
 		String s2 = sc.nextLine();
 		Longest_common_subseq lcs = new Longest_common_subseq();
-		// recursion
-		//int len1 = lcs.LCSubseq(s1, s2, s1.length(), s2.length());  // using recursion
-		//System.out.println(len1);
+
+		int len1 = lcs.LCSubseq(s1, s2, s1.length(), s2.length());  // using recursion
+		System.out.println(len1);
 
 	}
 
