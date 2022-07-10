@@ -27,7 +27,8 @@ public class Longest_common_subseq {
 		if (S1.charAt(n - 1) == S2.charAt(m - 1)) {
 			//System.out.println(S1.charAt(n-1));
 			return 1 + LCSubseq(S1, S2, n - 1, m - 1);
-		} else
+		}
+		else
 			return Math.max(LCSubseq(S1, S2, n, m - 1), LCSubseq(S1, S2, n - 1, m));
 
 	}
