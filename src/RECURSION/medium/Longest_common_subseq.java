@@ -1,8 +1,5 @@
-package RECURSION;
+package RECURSION.medium;
 
-import Strings.Medium.Longest_common_substring;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Longest_common_subseq {

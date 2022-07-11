@@ -1,4 +1,4 @@
-package RECURSION;
+package RECURSION.medium;
 
 import java.util.Scanner;
 // NX4 ways of tiles

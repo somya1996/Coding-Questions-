@@ -1,4 +1,4 @@
-package RECURSION;
+package RECURSION.medium;
 
 import java.util.ArrayList;
 import java.util.Scanner;

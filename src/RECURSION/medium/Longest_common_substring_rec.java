@@ -1,4 +1,4 @@
-package RECURSION;
+package RECURSION.medium;
 
 import java.util.HashSet;
 import java.util.Scanner;
