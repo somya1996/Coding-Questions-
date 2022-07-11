@@ -2,7 +2,7 @@ package RECURSION;
 
 import java.util.Scanner;
 
-public class Chech_pallindrome {
+public class Check_if_pallindrome {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
@@ -27,7 +27,7 @@ public class Chech_pallindrome {
 		if(i == str.length()/2)
 			return true;
 		if(str.charAt(i)!=str.charAt(n-i-1))
-			return true;
+			return false;
 		return is_pallindrome(i+1 , str);
 	}
 }
