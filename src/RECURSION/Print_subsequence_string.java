@@ -10,7 +10,7 @@ public class Print_subsequence_string {
 		solve_subsequence(s , s.length() , 0 , curr);
 	}
 	public static void solve_subsequence(String s , int n , int idx , String curr){
-
+		// time complexity - 2^n
 		if(idx == n){
 			System.out.println(curr);
 			return;
