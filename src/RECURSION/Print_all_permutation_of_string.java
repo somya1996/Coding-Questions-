@@ -7,21 +7,21 @@ public class Print_all_permutation_of_string {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		int n = str.length();
-		permute(str, 0, n-1);
+		permute1(str,0 ,n-1);
 	}
-	public static void permute(String str, int l, int r)
+
+	static void permute1(String str, int start , int end )
 	{
-		if (l == r) {
+		if(start == end){
 			System.out.println(str);
 			return;
 		}
-		else
-		{
-			for (int i = l; i <= r; i++)
-			{
-				str = swap(str,l,i);
-				permute(str, l+1, r);
-				str = swap(str,l,i);
+		else {
+			for (int i = start; i <= end; i++) {
+				str = swap(str, start, i);
+				// storing this in str so that we can work on  swapped function
+				permute1(str, start + 1, end);
+				str = swap(str, start, i);
 			}
 		}
 	}

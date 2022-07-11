@@ -1,0 +1,29 @@
+// code snippet
+class Solution
+{
+    //Function to convert binary tree to doubly linked list and return it.
+    static Node head = null;
+    static Node prev = null;
+    Node bToDLL(Node root)
+    {
+        Node temp = new Node(-1);
+        prev = temp;
+        inorder(root);
+        head = temp.right;
+        head.left = null;
+        return head;
+    }
+    public static void inorder(Node root){
+        if(root == null){
+            return;
+        }
+        // left node recursion
+        inorder(root.left);
+        // root node data 
+        prev.right = root;
+        root.left = prev;
+        prev = root;
+        // right node recursion
+        inorder(root.right);
+    }
+}
