@@ -23,6 +23,7 @@ public class Print_all_pallindrome_permutation {
 	public static void solve(String str , int start , int end , HashSet<String> ans){
 		// Base case
 		if(start == end){
+			//System.out.println(str);
 			if(isPallindrome(str)){
 				ans.add(str);
 			}
@@ -33,6 +34,7 @@ public class Print_all_pallindrome_permutation {
 			solve(str , start+1 , end , ans);
 			str = swap(str , start , i);
 		}
+
 	}
 	public static String swap(String str , int i , int j){
 		StringBuilder sb = new StringBuilder(str);
@@ -41,18 +43,13 @@ public class Print_all_pallindrome_permutation {
 		return sb.toString();
 	}
 	public static boolean isPallindrome(String str){
-		int start = 0 , end = str.length()-1;
-		while(start < end){
-			if(str.charAt(start) == str.charAt(end)){
-				start++;
-				end--;
-			}
-			else
+		int i = 0, j = str.length() - 1;
+		while (i < j) {
+			if (str.charAt(i) != str.charAt(j))
 				return false;
+			i++;
+			j--;
 		}
-		if(start == end)
-			return true;
-		return  false;
-
+		return true;
 	}
 }
