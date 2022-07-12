@@ -1,9 +1,17 @@
 package RECURSION.medium;
 
-import java.util.ArrayList;
+
 import java.util.HashSet;
 import java.util.Scanner;
+/*
+TIME COMPLEXITY
+For any given string of length n there are n! possible permutations,
+and we need to print all of them so Time complexity is O(n * n!).
 
+SPACE COMPLEXITY
+The function will be called recursively and will be stored in call stack for all n! permutations,
+ so Space complexity is O(n!).
+ */
 public class Print_all_pallindrome_permutation {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
