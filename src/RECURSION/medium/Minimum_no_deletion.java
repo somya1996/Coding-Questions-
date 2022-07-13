@@ -13,6 +13,7 @@ public class Minimum_no_deletion {
 		int deletion_of_string = s.length() - len;
 		System.out.println(deletion_of_string);
 	}
+	// using recursion
 	public static int deletion (String s , String t , int n , int m){
 		if(n == 0 || m == 0)
 			return 0;
