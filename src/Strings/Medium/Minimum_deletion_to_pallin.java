@@ -24,11 +24,9 @@ public class Minimum_deletion_to_pallin {
 					L[i][j] = 2;
 				else if (str.charAt(i) == str.charAt(j)) {
 					L[i][j] = L[i + 1][j - 1] + 2;
-					System.out.println("else if : "+L[i+1][j-1] +" + 2 = " + L[i][j] );
 				}
 				else
 					L[i][j] = Math.max(L[i][j - 1], L[i + 1][j]);
-					System.out.println("else : "+ " i "+i+" j "+j+" "+ L[i][j-1] +" "+ L[i+1][j] );
 			}
 		}
 		for(int i=0; i<n; i++) {
