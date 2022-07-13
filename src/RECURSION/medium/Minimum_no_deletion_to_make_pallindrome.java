@@ -2,7 +2,7 @@ package RECURSION.medium;
 
 import java.util.Scanner;
 // same as longest Pallindromic subsequence
-public class Minimum_no_deletion {
+public class Minimum_no_deletion_to_make_pallindrome {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
