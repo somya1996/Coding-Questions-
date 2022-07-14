@@ -7,8 +7,11 @@ public class Longest_pallindrome_susequence_LPS {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
+
 		String ans = longest_Pall(s);
+
 		System.out.println(ans);
+
 	}
 
 	private static String longest_Pall(String s) {
