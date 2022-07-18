@@ -17,7 +17,7 @@ public class substring_with_similar_first_and_last_character {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
-
+		
 		// TIME COMPLEXITY - O(n^2)
 		/*
 		int count = 0;

@@ -13,6 +13,8 @@ public class Single_Number_II {
 		System.out.println(ans);
 	}
 	public static int singleNumber(int[] nums) {
+
+		// one way
 		int ans = 0;
 		for(int i=0; i<32; i++){
 			int sum = 0;
@@ -26,5 +28,9 @@ public class Single_Number_II {
 			}
 		}
 		return ans;
+
+
+		// other way
+
 	}
 }
