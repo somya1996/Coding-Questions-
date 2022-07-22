@@ -12,7 +12,7 @@ public class Print_subsequence_string {
 	public static void solve_subsequence(String s , int n , int idx , String curr){
 		// time complexity - 2^n
 		if(idx == n){
-			System.out.println(curr);
+			System.out.print(curr+" ");
 			return;
 		}
 		String op1 = curr ;// take element
