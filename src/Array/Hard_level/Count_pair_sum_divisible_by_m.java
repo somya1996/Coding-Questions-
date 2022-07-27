@@ -1,10 +1,9 @@
 package Array.Hard_level;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Scanner;
 
-public class Pair_sum_divisible_by_m {
+public class Count_pair_sum_divisible_by_m {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
