@@ -44,7 +44,7 @@ public class Distinct_prime_numbers {
 
 		for(int num:A)
 		{
-			for(int i=1;i<=n/i;i++)
+			for(int i=1;i*i<=n;i++)
 			{
 				if(num%i==0)
 				{
