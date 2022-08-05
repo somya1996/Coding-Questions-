@@ -21,11 +21,11 @@ public class SumOfNnumber {
 	}*/
 
 	// using parameterized function
-	public static int summing(int i , int sum){
-		if(i<1) {
+	public static int summing(int i , int sum) {
+		if (i < 1) {
 			System.out.println(sum);
 			return 0;
 		}
-		return summing(i-1 , sum +i);
+		return summing(i - 1, sum + i);
 	}
 }
