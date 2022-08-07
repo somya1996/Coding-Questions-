@@ -24,11 +24,11 @@ public class pair_sum {
 		for (int i = 0; i < n; i++) {
 			if (hm.containsKey(k - a[i]))
 				count++;
-				if (!hm.containsKey(a[i]))
-					hm.put(a[i], 1);
-				else//(if hm.key is already present in the hashmap table then we need to increment given key value)
-					hm.put(a[i], hm.get(a[i]) + 1);   // hm.get(a[i])+1 --> this is used to get the value at given key
-			}                                      //  Here a[i] is key
+			if (!hm.containsKey(a[i]))
+				hm.put(a[i], 1);
+			else//(if hm.key is already present in the hashmap table then we need to increment given key value)
+				hm.put(a[i], hm.get(a[i]) + 1);   // hm.get(a[i])+1 --> this is used to get the value at given key
+		}                                      //  Here a[i] is key
 		return count;
 	}
 }
