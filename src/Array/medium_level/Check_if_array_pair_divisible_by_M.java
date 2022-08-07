@@ -40,9 +40,11 @@ public class Check_if_array_pair_divisible_by_M {
 			}
 			int remain = M - rem;
 			int fq = hm.get(rem);
-			int remain_fq = hm.get(rem);
-			if(remain_fq != fq)
-				return false;
+			if(hm.containsKey(remain)) {
+				int remain_fq = hm.get(remain);
+				if (remain_fq != fq)
+					return false;
+			}
 		}
 		return true;
 	}
