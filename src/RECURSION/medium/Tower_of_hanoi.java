@@ -8,7 +8,8 @@ public class Tower_of_hanoi {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int [][] ans = towerOfHanoi(n);
+		Tower_of_hanoi t = new Tower_of_hanoi();
+		int [][] ans = t.towerOfHanoi(n);
 		for(int i=0; i<ans.length ; i++){
 			for(int j = 0 ; j < 3 ; j++){
 				System.out.print(ans[i][j]+" ");
@@ -16,9 +17,10 @@ public class Tower_of_hanoi {
 			System.out.println();
 		}
 	}
-	static int ans [][];
-	static int move = 0;
-	public static int[][] towerOfHanoi(int A) {
+
+	int ans [][];
+	int move = 0;
+	public int[][] towerOfHanoi(int A) {
 		int moves = (1<<A)-1;
 		int s = 1;
 		int h = 2;
@@ -27,7 +29,7 @@ public class Tower_of_hanoi {
 		solve( A , s , h , d);
 		return ans;
 	}
-	public static void solve(int n , int s , int h , int d){
+	public void solve(int n , int s , int h , int d){
 		if( n == 0){
 			return;
 		}
