@@ -38,30 +38,22 @@ public class Count_pair_sum_divisible_by_m {
 		int count = 0;
 		for(int i=0; i<arr.length; i++){
 			int rem = arr[i]%k;
-			int complement = k - rem;
-			if(rem == 0) {
-				if (hm.containsKey(rem)) {
+			if(rem == 0){
+				if(hm.containsKey(rem))
 					count += hm.get(rem);
-				}
-				else{
-					hm.put(rem , 1);
-				}
+				//hm.getOrDefault(rem , 0);
 			}
-			else if(2*k == rem){
-				//count += hm.getOrDefault(rem , 0);
-				if (hm.containsKey(rem)) {
-					count += hm.get(rem);
-				}
-				else{
-					hm.put(rem , 1);
-				}
+			int complement = k - rem;
+			if(hm.containsKey(complement)) {
+				count += hm.get(complement);
+				//System.out.println(count);
+			}
+			if(hm.containsKey(rem)){
+				hm.put(rem , hm.get(rem)+1);
 			}
 			else{
-				if(hm.containsKey(complement)){
-					count += hm.get(complement);
-				}
+				hm.put(rem , 1);
 			}
-
 		}
 		return count;
 	}

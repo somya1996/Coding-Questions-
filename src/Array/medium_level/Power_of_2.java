@@ -48,7 +48,7 @@ public class Power_of_2 {
 			return 1;
 		return 0;
 		*/
-
+		// another approach 
 		String dividend = A;
 		StringBuilder quotient;
 
