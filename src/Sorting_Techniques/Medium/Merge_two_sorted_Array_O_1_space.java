@@ -22,7 +22,7 @@ public class Merge_two_sorted_Array_O_1_space {
 		}
 
 		Merge_two_sorted_Array_O_1_space mts = new Merge_two_sorted_Array_O_1_space();
-		// extra space is allowed
+		// extra space is not allowed
 		mts.merge(A , B , A.length , B.length);
 
 		for (int i=0; i<A.length; i++){
