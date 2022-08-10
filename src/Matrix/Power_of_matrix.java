@@ -25,7 +25,7 @@ public class Power_of_matrix {
 		}
 	}
 	public static int[][] power_of_matrix(int[][] mat , int power){
-		if(power == 1)
+		/*if(power == 1)
 			return mat;
 		int ans[][] = power_of_matrix(mat , power/2);
 		if(power%2 == 0){
@@ -33,6 +33,16 @@ public class Power_of_matrix {
 		}
 		else
 			return multiply_mat(ans , multiply_mat(ans , mat));
+
+		*/
+		int res [][] = {{1,0},{0,1}};
+		while(power > 0){
+			if(power%2 != 0 )
+				res = multiply_mat(res , mat);
+			mat = multiply_mat(mat,mat);
+			power /= 2;
+		}
+		return  res;
 	}
 	public static int[][] multiply_mat(int[][] mat1 , int[][] mat2){
 		int ans[][] = new int[mat1.length][mat2.length];
