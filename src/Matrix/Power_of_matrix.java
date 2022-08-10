@@ -35,7 +35,7 @@ public class Power_of_matrix {
 			return multiply_mat(ans , multiply_mat(ans , mat));
 
 		*/
-		int res [][] = {{1,0},{0,1}};
+		int res [][] = {{1,0},{0,1}}; // this is used when want to return same ans
 		while(power > 0){
 			if(power%2 != 0 )
 				res = multiply_mat(res , mat);
