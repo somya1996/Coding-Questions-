@@ -42,14 +42,14 @@ public class Maximum_unsorted_subarray {
 			max = Math.max(max , A[x]);
 			min = Math.min(min , A[x]);
 		}
-		System.out.println("Max "+max);
-		System.out.println("Min "+min);
+		//System.out.println("Max "+max);
+		//System.out.println("Min "+min);
 
 		int low = -1 , high = -1;
 		for(int x=0; x<n; x++){
 			if(A[x] > min) {
 				low = x;
-				System.out.println("low "+low);
+				//System.out.println("low "+low);
 				break;
 			}
 		}
@@ -57,7 +57,7 @@ public class Maximum_unsorted_subarray {
 		for(int x = n-1; x>=0; x-- ){
 			if(A[x] < max){
 				high = x;
-				System.out.println("high "+high);
+				//System.out.println("high "+high);
 				break;
 			}
 		}
