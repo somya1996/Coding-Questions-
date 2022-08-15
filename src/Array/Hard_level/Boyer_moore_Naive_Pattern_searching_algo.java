@@ -3,7 +3,7 @@ package Array.Hard_level;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Boyer_moore_Pattern_searching_algo {
+public class Boyer_moore_Naive_Pattern_searching_algo {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String text = sc.nextLine();
