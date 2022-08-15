@@ -31,7 +31,7 @@ public class Boyer_moore_Pattern_searching_algo {
 				result.add(i);
 		}
 
-		if(i == text.length() &&  result.isEmpty()){
+		if(result.isEmpty()){
 			result.add(-1);
 			return result;
 		}
