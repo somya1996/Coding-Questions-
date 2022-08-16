@@ -1,4 +1,4 @@
-package Strings.Medium;
+package Sorting_Techniques;
 
 import java.util.Scanner;
 
