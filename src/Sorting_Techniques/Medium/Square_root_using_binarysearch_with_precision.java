@@ -53,10 +53,9 @@ public class Square_root_using_binarysearch_with_precision {
 	// Driver code
 	public static void main(String[] args)
 	{
-		// Function calling
-		System.out.println(squareRoot(50, 3));
-
-		// Function calling
-		System.out.println(squareRoot(10, 4));
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int p = sc.nextInt();
+		System.out.println(squareRoot(n, p));
 	}
 }
