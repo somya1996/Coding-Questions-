@@ -52,7 +52,7 @@ public class Special_Integer {
 		int start = 1 , end = A.length;
 		while(start <= end){
 			int mid = (start+end)/2;
-			if(check_mid(A , mid , B)==true){
+			if(check_mid(prefix , mid , B)==true){
 				ans = mid;
 				start = mid+1;
 			}
@@ -61,12 +61,12 @@ public class Special_Integer {
 		}
 		return ans;
 	}
-	public static boolean check_mid(int A[] , int mid , int B){
-		for (int i = mid - 1; i < A.length; ++i) {
+	public static boolean check_mid(int prefix[] , int mid , int B){
+		for (int i = mid-1; i < prefix.length; ++i) {
 			if (i == mid - 1) {
-				if (A[i] > B)
+				if (prefix[i] > B)
 					return false;
-			} else if (A[i] - A[i - mid] > B) {
+			} else if (prefix[i] - prefix[i - mid] > B) {
 				return false;
 			}
 		}
