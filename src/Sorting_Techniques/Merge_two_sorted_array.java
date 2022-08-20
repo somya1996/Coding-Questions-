@@ -34,7 +34,7 @@ public class Merge_two_sorted_array {
 	}
 	public int[] solve(final int[] A, final int[] B) {
 		/*
-		// Brute force
+		// Brute force using space
 		int m = A.length + B.length;
 		int ans[] = new int[m];
 		int k = 0;
@@ -50,7 +50,7 @@ public class Merge_two_sorted_array {
 
 		*/
 
-		/*
+		/* using space
 		// TC - O(n+m)  SC - O(n+m)
 		int m = A.length + B.length;
 		int ans[] = new int[m];
@@ -72,7 +72,7 @@ public class Merge_two_sorted_array {
 			ans[k++] = B[j++];
 		}
 		return ans;
-		*/
+		*/ // using space
 		//TC : O( nlog(n) + mlog(m) )
 		//SC : O(n)
 		Map<Integer,Boolean> mp = new TreeMap<Integer,Boolean>();
