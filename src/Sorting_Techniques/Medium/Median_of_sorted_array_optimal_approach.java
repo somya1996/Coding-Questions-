@@ -1,7 +1,8 @@
 package Sorting_Techniques.Medium;
 
 import java.util.Scanner;
-
+// TC - O(min(log m, log n))
+// SC - O(1)
 public class Median_of_sorted_array_optimal_approach {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
