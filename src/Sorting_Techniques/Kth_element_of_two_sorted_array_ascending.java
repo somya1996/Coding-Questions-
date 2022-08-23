@@ -2,7 +2,7 @@ package Sorting_Techniques;
 
 import java.util.Scanner;
 
-public class Kth_element_of_two_sorted_array {
+public class Kth_element_of_two_sorted_array_ascending {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();

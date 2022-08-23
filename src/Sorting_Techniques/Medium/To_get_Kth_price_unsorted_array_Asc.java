@@ -2,7 +2,7 @@ package Sorting_Techniques.Medium;
 
 import java.util.Scanner;
 
-public class To_get_Kth_price_unsorted_array {
+public class To_get_Kth_price_unsorted_array_Asc {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
@@ -35,11 +35,22 @@ public class To_get_Kth_price_unsorted_array {
 		return ans;
 	}
 	public static int count(int[] a , int mid){
-		int num = 0;
+		/*int num = 0;
 		for(int i=0; i< a.length; i++){
 			if(a[i]<= mid)
 				num++;
 		}
-		return num;
+		return num;*/
+		int start = 0 , end = a.length;
+		while(start<end){
+			int mid_ele = start + (end-start)/2;
+			if(a[mid_ele] > mid){
+				end = mid_ele;
+			}
+			else{
+				start = mid_ele + 1;
+			}
+		}
+		return start;
 	}
 }
