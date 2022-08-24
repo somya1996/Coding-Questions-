@@ -35,6 +35,7 @@ public class Student_class implements Comparable<Student_class>{
 			return 1;
 		else if(this.marks < obj.marks)
 			return -1;
-		return 0;
+
+		return this.name.compareTo(obj.name);
 	}
 }
