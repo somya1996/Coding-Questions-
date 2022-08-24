@@ -23,6 +23,7 @@ public class to_form_largest_no_from_array {
 		for(int x: A){
 			str[i++] = Integer.toString(x);
 		}
+		/*
 		Arrays.sort(str, new Comparator<String>() {
 			@Override
 			public int compare(String a, String b) {
@@ -30,6 +31,13 @@ public class to_form_largest_no_from_array {
 				String o2 = b+a;
 				return o2.compareTo(o1);
 			}
+		});
+		*/
+		// other way to write this as
+		Arrays.sort(str , (a , b)->{
+			String o1 = a+b;
+			String o2 = b+a;
+			return o2.compareTo(o1);
 		});
 
 		if(str[0].equals("0"))
