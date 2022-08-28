@@ -59,6 +59,7 @@ public class Relative_sort_array {
 				}
 			}
 		}
+
 		return al;
 	}
 }

@@ -1,4 +1,4 @@
-package Array.Hard_level;
+package Sorting_Techniques.Medium;
 
 import java.util.Arrays;
 import java.util.Scanner;
