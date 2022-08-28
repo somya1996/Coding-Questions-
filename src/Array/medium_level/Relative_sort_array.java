@@ -21,11 +21,12 @@ public class Relative_sort_array {
 			System.out.print(ans.get(i)+" ");
 		}
 	}
+	//TC : O(nlogn)   SC : O(n)
 	public static ArrayList<Integer> solve(int[] A, int[] B) {
 		ArrayList<Integer> al = new ArrayList<>();
-		HashMap<Integer , Integer> hm = new LinkedHashMap<Integer , Integer>();
+		TreeMap<Integer , Integer> hm = new TreeMap<Integer , Integer>();
 
-		Arrays.sort(A);
+		//Arrays.sort(A);
 		for(int i=0; i<A.length; i++){
 			if(hm.containsKey(A[i]))
 				hm.put(A[i] , hm.get(A[i])+1);
