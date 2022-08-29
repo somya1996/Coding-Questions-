@@ -1,4 +1,4 @@
-package Array.medium_level;
+package Array.medium_level.JUMP_GAME_PATTERN;
 
 import java.util.Scanner;
 
