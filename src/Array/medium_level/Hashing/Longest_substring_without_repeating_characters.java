@@ -1,5 +1,6 @@
 package Array.medium_level.Hashing;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -11,19 +12,18 @@ public class Longest_substring_without_repeating_characters {
 		System.out.println(ans);
 	}
 	public static int lengthOfLongestSubstring(String s) {
-		HashSet<Character> hs = new HashSet<>();
-		int start = 0 , end = 0 , ans = Integer.MIN_VALUE;
-		for(int i=0; i<s.length(); i++){
-			if(hs.contains(s.charAt(i))){
-				end = i;
-				ans = Math.max(ans , end - start);
-				start = end;
-				hs.clear();
-				hs.add(s.charAt(start));
+		if(s.length()==0 || s.length()==1)
+			return s.length();
+		HashMap<Character , Integer> hm = new HashMap<>();
+		int start = 0 , end = 0 , ans = 0;
+		while(end<s.length()){
+			char c = s.charAt(end);
+			if(hm.containsKey(c) && start<=hm.get(c)){
+				start = hm.get(c)+1;
 			}
-			else{
-				hs.add(s.charAt(i));
-			}
+			ans = Math.max(ans,end-start+1);
+			hm.put(c,end);
+			end++;
 		}
 		return ans;
 	}
