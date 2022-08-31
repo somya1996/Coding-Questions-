@@ -49,10 +49,10 @@ public class Count_right_triangle {
 			System.out.println("Y "+mapY);
 
 			int l = (mapX.get(A[i])-1);
-			System.out.println("A[i] "+A[i]+"l "+l);
+			System.out.println("A[i] "+A[i]+" l "+l);
 
 			int r = (mapY.get(B[i])-1);
-			System.out.println("B[i] "+B[i]+"r "+r);
+			System.out.println("B[i] "+B[i]+" r "+r);
 
 			res += l*r;
 		}
