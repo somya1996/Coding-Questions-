@@ -2,7 +2,7 @@ package Strings.Medium;
 
 import java.util.Scanner;
 
-public class Longest_palli_MANACHER_ALGO_LPS {
+public class Longest_pallindromic_substring__expanding_through_centeres {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
