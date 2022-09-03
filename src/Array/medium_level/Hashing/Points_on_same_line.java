@@ -26,6 +26,7 @@ public class Points_on_same_line {
 		int maxi = 0 , count = 0;
 		int n = A.length;
 		for(int i=0; i<n; i++){
+			maxi = 0 ; count = 0;
 			for(int j=i+1; j<n; j++){
 				if(A[i] == A[j] &&  B[i] == B[j]){
 					count++;
