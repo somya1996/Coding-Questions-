@@ -1,4 +1,4 @@
-package Array.medium_level;
+package Array.medium_level.Hashing;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -28,12 +28,14 @@ public class Count_nice_pairs_in_array {
 		for(int a: nums){
 			long rev=reverse(a);
 			long diff=a-rev;
+			System.out.println("diff "+diff);
 			if(hm.containsKey(diff)){
 				count=(count%mod + hm.get(diff)%mod)%mod;
 			}
 
 			hm.put(diff,hm.getOrDefault(diff,0)+1);
 		}
+		System.out.println(hm);
 		return (int)count;
 	}
 	public static int reverse(int num){
