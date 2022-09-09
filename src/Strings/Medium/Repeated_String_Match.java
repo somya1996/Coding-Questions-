@@ -25,8 +25,8 @@ public class Repeated_String_Match {
 
 		String t = A;
 		int count = 1;
-		while(t.length()<B.length()){
-			t += A;
+		while(A.length()<B.length()){
+			A += t;
 			count++;
 		}
 		//System.out.println(t);
