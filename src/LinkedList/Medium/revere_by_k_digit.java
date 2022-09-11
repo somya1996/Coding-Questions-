@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.Medium;
 
 import java.util.Scanner;
 
