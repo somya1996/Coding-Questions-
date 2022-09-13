@@ -42,7 +42,8 @@ public class InsertAtNthNode {
 		temp.next = n;
 		n.next = null;
 		return head;
-	}private static void printList(Node head) {
+	}
+	private static void printList(Node head) {
 		System.out.println("Linked List");
 		while (head != null) {
 			System.out.print(head.data + " ");
