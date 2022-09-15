@@ -1,4 +1,4 @@
-package LinkedList.HARD.Reverse_by_K_group;
+package LinkedList.HARD;
 
 import java.util.List;
 import java.util.Scanner;
