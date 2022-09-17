@@ -9,19 +9,19 @@ public class Evaluate_expression {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<String> al = new ArrayList<>();
 		int n = sc.nextInt();
+		sc.nextLine();
 		for(int i=0; i<n; i++){
-			al.add(sc.next());
+			al.add(sc.nextLine());
 		}
 		int ans = evalRPN(al);
 		System.out.println(ans);
 
 	}
+	/**/
 	public static int evalRPN(ArrayList<String> A) {
-		int length = A.size();
-		if(length==1) return Integer.parseInt(A.get(0));  //Edge case if only one number is present
 		Stack < Integer > stk = new Stack < > ();
 		int result=0;
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < A.size(); i++) {
 			if (A.get(i).equals("+") || A.get(i).equals("-") || A.get(i).equals("*") || A.get(i).equals("/")) {
 				String operator = A.get(i);
 				int b = stk.pop();
@@ -36,6 +36,6 @@ public class Evaluate_expression {
 				stk.push(currElement);
 			}
 		}
-		return result;
+		return stk.peek();
 	}
 }
