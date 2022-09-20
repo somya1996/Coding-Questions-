@@ -1,4 +1,4 @@
-package Stack;
+package Stack.Hard;
 
 import javax.xml.transform.sax.SAXResult;
 import java.util.Scanner;
