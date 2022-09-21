@@ -45,6 +45,8 @@ public class Max_XOR_first_second_max_element {
 			if(left_greater[i] > A[i])
 				ans = Math.max(ans , left_greater[i]^A[i]);
 		}
+		if(ans == -1)
+			return 0;
 		return ans;
 	}
 }
