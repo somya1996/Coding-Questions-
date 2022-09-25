@@ -1,4 +1,4 @@
-package QUEUE;
+package QUEUE.Hard;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
