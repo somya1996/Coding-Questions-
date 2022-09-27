@@ -117,4 +117,5 @@ public class Delete_odd_pos_nodes_CLL {
 		temp.next = del.next;
 		return head;
 	}
+
 }
