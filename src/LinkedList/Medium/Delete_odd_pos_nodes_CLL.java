@@ -7,6 +7,10 @@ public class Delete_odd_pos_nodes_CLL {
 	{
 		int data;
 		Node next;
+		Node(int x){
+			data = x;
+			next = null;
+		}
 	};
 
 	// Function return number of nodes present in list
@@ -16,11 +20,7 @@ public class Delete_odd_pos_nodes_CLL {
 		int count = 0;
 
 		// if list is empty simply return length zero
-		if (head == null)
-		{
-			return 0;
-		}
-
+		if (head == null) return 0;
 		// traverse first to last node
 		else
 		{
@@ -34,22 +34,14 @@ public class Delete_odd_pos_nodes_CLL {
 	}
 
 	// Function print data of list
-	static void Display( Node head)
-	{
+	static void Display( Node head){
 		Node current = head;
-
-		// if list is empty simply show message
-		if (head == null)
-		{
+		if (head == null){
 			System.out.printf("\nDisplay List is empty\n");
 			return;
 		}
-
-		// traverse first to last node
-		else
-		{
-			do
-			{
+		else{
+			do{
 				System.out.printf("%d ", current.data);
 				current = current.next;
 			} while (current != head);
@@ -58,45 +50,20 @@ public class Delete_odd_pos_nodes_CLL {
 
 	/* Function to insert a node at the end of
 	a Circular linked list */
-	static Node Insert(Node head, int data)
-	{
+	static Node Insert(Node head, int data){
 		Node current = head;
-		// Create a new node
-		Node newNode = new Node();
-
-		// check node is created or not
-		if (newNode == null)
-		{
-			System.out.printf("\nMemory Error\n");
-			return null;
-		}
-
-		// insert data into newly created node
-		newNode.data = data;
-
-		// check list is empty
-		// if not have any node then
-		// make first node it
+		Node newNode = new Node(data);
 		if (head == null)
 		{
 			newNode.next = newNode;
 			head = newNode;
 			return head;
 		}
-
-		// if list have already some node
-		else
-		{
-			// move first node to last node
-			while (current.next != head)
-			{
+		else{
+			while (current.next != head){
 				current = current.next;
 			}
-
-			// put first or head node address in new node link
 			newNode.next = head;
-
-			// put new node address into last node link(next)
 			current.next = newNode;
 		}
 		return head;
@@ -132,9 +99,7 @@ public class Delete_odd_pos_nodes_CLL {
 		Node previous = head, next = head;
 		// check list have any node
 		// if not then return
-		if (head == null)
-		{
-			System.out.printf("\nList is empty\n");
+		if (head == null){
 			return head;
 		}
 
@@ -170,12 +135,7 @@ public class Delete_odd_pos_nodes_CLL {
 		int len = Length(head);
 		int count = 0;
 		Node previous = head, next = head;
-
-		// check list have any node
-		// if not then return
-		if (head == null)
-		{
-			System.out.printf("\nDelete Last List is empty\n");
+		if (head == null){
 			return null;
 		}
 
@@ -270,14 +230,12 @@ public class Delete_odd_pos_nodes_CLL {
 	public static void main(String args[])
 	{
 		Node head = null;
-		head = Insert(head, 99);
-		head = Insert(head, 11);
-		head = Insert(head, 22);
-		head = Insert(head, 33);
-		head = Insert(head, 44);
-		head = Insert(head, 55);
-		head = Insert(head, 66);
-
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for(int i=0; i<n; i++){
+			int x = sc.nextInt();
+			head = Insert(head , x);
+		}
 		// Deleting Odd positioned nodes
 		System.out.printf("Initial List: ");
 		Display(head);
@@ -293,6 +251,5 @@ public class Delete_odd_pos_nodes_CLL {
 		System.out.printf("\nAfter deleting even position nodes: ");
 		head = DeleteAllEvenNode(head);
 		Display(head);
-
 	}
 }
