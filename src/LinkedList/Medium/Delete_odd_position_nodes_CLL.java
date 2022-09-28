@@ -2,7 +2,7 @@ package LinkedList.Medium;
 
 import java.util.Scanner;
 
-public class Delete_odd_nodes {
+public class Delete_odd_position_nodes_CLL {
 	public static Node head;
 	static class Node{
 		int data;

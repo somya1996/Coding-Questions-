@@ -2,7 +2,7 @@ package LinkedList.Medium;
 
 import java.util.Scanner;
 
-public class Delete_odd_pos_nodes_CLL {
+public class Delete_even_pos_nodes_CLL {
 	static class Node
 	{
 		int data;
