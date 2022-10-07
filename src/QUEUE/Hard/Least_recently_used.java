@@ -75,10 +75,6 @@ public class Least_recently_used {
 			if (tail != null) {
 				cache.remove(tail.key);
 				tail = tail.prev;
-				if (tail != null) {
-					tail.next.prev = null;
-					tail.next = null;
-				}
 				count--;
 			}
 		}
