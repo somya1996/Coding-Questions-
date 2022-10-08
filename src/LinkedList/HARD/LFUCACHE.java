@@ -84,26 +84,12 @@ public class LFUCACHE {
 			newlist.addNode(new_node);
 			freq_Map.put(new_node.frequency, newlist);
 		}
-		System.out.println(cache);
-		System.out.println("2nd hashmap");
-		System.out.println(freq_Map);
+		//System.out.println(cache);
+		//System.out.println("2nd hashmap");
+		//System.out.println(freq_Map);
 	}
 }
-class LRU{
-	public static void main(String[] args) {
-		LFUCACHE lfu = new LFUCACHE(2);
-		lfu.put(1,1);
-		lfu.put(2,2);
-		lfu.get(1);
-		lfu.put(3,3);
-		lfu.get(2);
-		lfu.get(3);
-		lfu.put(4,4);
-		lfu.get(1);
-		lfu.get(3);
-		lfu.get(4);
-	}
-}
+
 class DoubleLinkedNode {
 	int key;
 	int value;
@@ -144,5 +130,20 @@ class DoubleLinkedListList{
 		prevNode.next = nextNode;
 		nextNode.prev = prevNode;
 		listsize--;
+	}
+}
+class LFU{
+	public static void main(String[] args) {
+		LFUCACHE lfu = new LFUCACHE(2);
+		lfu.put(1,1);
+		lfu.put(2,2);
+		lfu.get(1);
+		lfu.put(3,3);
+		lfu.get(2);
+		lfu.get(3);
+		lfu.put(4,4);
+		lfu.get(1);
+		lfu.get(3);
+		lfu.get(4);
 	}
 }
