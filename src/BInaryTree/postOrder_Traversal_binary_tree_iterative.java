@@ -48,7 +48,7 @@ public class postOrder_Traversal_binary_tree_iterative {
          */
 		printll(root);
 	}
-	public static void printll(TreeNode root){
+	/*public static void printll(TreeNode root){
 		ArrayList<Integer> ans = new ArrayList<>();
 		Stack<TreeNode> stack = new Stack<>();
 		stack.push(root);
@@ -63,5 +63,27 @@ public class postOrder_Traversal_binary_tree_iterative {
 		}
 		Collections.reverse(ans);
 		System.out.println(ans);
+	}*/
+	public static void printll(TreeNode root){
+		Stack<TreeNode> s = new Stack<>();
+		ArrayList<Integer> al = new ArrayList<>();
+		if(root == null)
+			return;
+		while (root != null || !s.isEmpty()){
+			if(root != null){
+				while(root != null){
+					s.push(root);
+					al.add(root.data);
+					root = root.right;
+				}
+			}
+			else{
+				TreeNode curr = s.pop();
+				root = curr.left;
+			}
+		}
+		Collections.reverse(al);
+		for(int i=0; i<al.size(); i++)
+			System.out.print(al.get(i)+" ");
 	}
 }
