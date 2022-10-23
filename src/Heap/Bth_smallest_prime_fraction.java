@@ -2,10 +2,7 @@ package Heap;
 
 import groovy.lang.Tuple;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Scanner;
+import java.util.*;
 
 public class Bth_smallest_prime_fraction{
 	public static class tuple{
@@ -65,8 +62,8 @@ public class Bth_smallest_prime_fraction{
 	}
 	*/
 	/** OPTIMIZED APPROACH **/
-	public static int[] solve(int A[] , int B){
-		PriorityQueue<tuple> pq = new PriorityQueue<>(Comparator.comparing(a->a.div));
+	public static int[] solve(int A[] , int B) {
+		/*PriorityQueue<tuple> pq = new PriorityQueue<>(Comparator.comparing(a->a.div));
 		int last = A.length-1;
 		for(int i=0; i<A.length; i++){
 			pq.add(new tuple((double)(A[i]/A[last]) , i , last));
@@ -78,6 +75,29 @@ public class Bth_smallest_prime_fraction{
 			}
 		}
 		tuple a = pq.poll();
-		return new int[]{A[a.val1],A[a.val2]};
+		return new int[]{A[a.val1],A[a.val2]};*/
+
+		PriorityQueue<Double> min_heap = new PriorityQueue<Double>();
+		HashMap<Double, int[]> map = new HashMap<>();
+		int n = A.length;
+
+		for (int i = 0; i < n - 1; i++) {
+			double fraction = 1D * A[i] / A[n - 1];
+			min_heap.add(fraction);
+			map.put(fraction, new int[]{i, n - 1});
+		}
+
+		while (B != 1) {
+			int[] temp = map.remove(min_heap.poll());
+			if ((temp[1] - 1) > temp[0]) {
+				double fraction = 1D * A[temp[0]] / A[temp[1] - 1];
+				min_heap.add(fraction);
+				map.put(fraction, new int[]{temp[0], temp[1] - 1});
+			}
+			B--;
+		}
+
+		int[] ans = map.get(min_heap.peek());
+		return new int[]{A[ans[0]], A[ans[1]]};
 	}
 }
