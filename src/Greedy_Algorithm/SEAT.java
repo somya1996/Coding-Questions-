@@ -45,3 +45,16 @@ public class SEAT {
 		return (int)jump%mod;
 	}
 }
+/**
+ * Initialize an arraylist to store all the indexes of person present.
+ * Find the median of arrayList of positions.
+ * Now all the other persons will now be made to sit in a group so:
+        > all person sit in starting
+        > all person sit in end
+        > all person sit in middle
+ * All the other persons will now be made to sit around this person as this will give the minimum number
+   of jumps that are required to be made.
+ * Initialize a variable ans that stores the minimum jumps required.
+ * Now, traverse the vector position[] and for every index i find the median element and update ans as:
+ * ans = ans + abs(position[i] – medianElement)
+ */
