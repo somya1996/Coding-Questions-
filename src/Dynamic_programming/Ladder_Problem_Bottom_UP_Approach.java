@@ -54,7 +54,7 @@ public class Ladder_Problem_Bottom_UP_Approach {
 		if(A == 1 || A == 2)
 			return A;
 		if(dp[A] == -1){
-			dp[A] = dp[A-1]+dp[A-2];
+			dp[A] = no_of_step(dp , A-1)+no_of_step(dp , A-2);
 		}
 		return (int)(dp[A]%mod);
 	}
