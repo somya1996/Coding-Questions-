@@ -7,8 +7,10 @@ public class Minimum_Number_of_Squares {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
+
 		int ans = countMinSquares_recursive(n);
 		System.out.println(ans);
+
 		int ans1 = bottom_up(n);
 		System.out.println(ans1);
 	}
@@ -47,7 +49,7 @@ public class Minimum_Number_of_Squares {
 	public static int bottom_up(int n){
 		if(n<=3)
 			return n;
-		int dp[] = new int[n];
+		int dp[] = new int[n+1];
 		dp[0] = 0;
 		dp[1] = 1;
 		dp[2] = 2;
@@ -58,7 +60,7 @@ public class Minimum_Number_of_Squares {
 			for(int i=1; i<=(int)Math.sqrt(x); i++){
 				int temp = i*i;
 				if(temp>x) break;
-				dp[x] = Math.min(x , 1+dp[i]);
+				dp[x] = Math.min(dp[x] , 1+dp[x-temp]);
 			}
 		}
 		return dp[n];
