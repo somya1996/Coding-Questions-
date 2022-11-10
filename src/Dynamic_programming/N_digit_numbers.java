@@ -52,7 +52,7 @@ public class N_digit_numbers {
 		int start = remaining_changes == changes_needed ? 1:0;
 		for(int i=start; i<=9; i++){
 			if(sum - i >= 0){
-				total = total%mod + td_solve(remaining_changes-1 , changes_needed , sum-i)%mod;
+				total = (total%mod + td_solve(remaining_changes-1 , changes_needed , sum-i)%mod)%mod;
 			}
 		}
 		hm.put(key , total);
