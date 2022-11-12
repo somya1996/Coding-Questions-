@@ -22,7 +22,11 @@ public class zero_one_KNAPSACK {
 
 		int ans1 = memoization(value , weight , capacity);
 		System.out.println(ans1);
+
+		int ans2 = tabulation(value , weight , capacity);
+		System.out.println(ans2);
 	}
+
 	// recursive approach (in reverse order)
 	public static int recursive(int[] val, int[] weight, int capacity) {
 		return knapsack_recursive(val , weight , capacity ,val.length);
@@ -59,5 +63,26 @@ public class zero_one_KNAPSACK {
 		else //if(val[n-1]>capacity)
 			dp[n][capacity] = memoize_knapsack(val, weight, capacity, n - 1, dp);
 		return dp[n][capacity];
+	}
+
+	// BOTTOM UP APPROACH
+	public static int tabulation(int val[] , int[] wt , int capacity ){
+		int dp[][] = new int[val.length+1][capacity+1];
+		for(int i=0; i<val.length+1; i++){
+			dp[i][0] = 0;
+		}
+		for(int i=0; i<capacity+1; i++){
+			dp[0][i] = 0;
+		}
+		for(int i=1; i<val.length+1; i++){
+			for(int j=1; j<capacity+1; j++){
+				if(val[i-1] <= j){
+					dp[i][j] = Math.max(wt[i-1]+dp[i-1][j-val[i-1]] , dp[i-1][j]);
+				}
+				else
+					dp[i][j] = dp[i-1][j];
+			}
+		}
+		return dp[val.length][capacity];
 	}
 }
