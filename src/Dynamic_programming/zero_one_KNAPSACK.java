@@ -23,37 +23,41 @@ public class zero_one_KNAPSACK {
 		int ans1 = memoization(value , weight , capacity);
 		System.out.println(ans1);
 	}
-	// recursive approach
+	// recursive approach (in reverse order)
 	public static int recursive(int[] val, int[] weight, int capacity) {
-		return knapsack_recursive(val , weight , capacity , 0 , val.length);
+		return knapsack_recursive(val , weight , capacity ,val.length);
 	}
-	public static int knapsack_recursive(int v[] , int wt[] , int c ,int idx , int n){
+	public static int knapsack_recursive(int v[] , int wt[] , int c ,int n){
 		// base case
-		if(n-1 == 0 || c == 0)
+		if(n == 0 || c == 0)
 			return 0;
-		if(v[n - 1] > c)
-			return knapsack_recursive(v, wt, c, idx+1 , n-1);
-		else {
-			int incl = wt[n - 1] + knapsack_recursive(v, wt, c - v[n-1],idx+1 , n - 1);
-			int excl = knapsack_recursive(v, wt, c, idx+1 , n - 1);
+		if(v[n-1] > c)
+			return knapsack_recursive(v, wt, c,n-1);
+		else{ //v[idx]<= c if capacity is greater than value so we have 2 choice
+			int incl = wt[n-1] + knapsack_recursive(v, wt, c - v[n-1], n-1);//include
+			int excl = knapsack_recursive(v, wt, c,n-1);//exclude
 			return Math.max(incl, excl);
 		}
 	}
 
-	// Top Down approach
+	// TOP DOWN APPROACH
 	public static int memoization(int[] val, int[] weight, int capacity){
-		int dp[][] = new int[val.length+1][weight.length+1];
+		int dp[][] = new int[val.length+1][capacity+1];
 		for(int row[]: dp)
 			Arrays.fill(row , -1);
-		return memoize_knapsack(val , weight , capacity , 0 , dp);
+		return memoize_knapsack(val , weight , capacity , val.length , dp);
 	}
-	public static int memoize_knapsack(int[] val, int[] weight, int capacity, int i, int[][] dp) {
-		if(i == val.length || capacity == 0)
+	public static int memoize_knapsack(int[] val, int[] weight, int capacity, int n, int[][] dp) {
+		if(n == 0 || capacity == 0)
 			return 0;
-		if(dp[i][capacity] != -1)
-			return dp[i][capacity];
-		dp[i][capacity] = Math.max(weight[i] + memoize_knapsack(val , weight , capacity-val[i] , i+1 , dp) ,
-				memoize_knapsack(val , weight , capacity , i+1 , dp));
-		return dp[i][capacity];
+		if(dp[n][capacity] != -1)
+			return dp[n][capacity];
+		if(val[n-1]<= capacity) {
+			dp[n][capacity] = Math.max(weight[n - 1] + memoize_knapsack(val, weight, capacity - val[n - 1], n - 1, dp),
+					memoize_knapsack(val, weight, capacity, n - 1, dp));
+		}
+		else //if(val[n-1]>capacity)
+			dp[n][capacity] = memoize_knapsack(val, weight, capacity, n - 1, dp);
+		return dp[n][capacity];
 	}
 }
