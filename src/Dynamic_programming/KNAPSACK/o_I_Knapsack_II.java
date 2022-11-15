@@ -1,4 +1,4 @@
-package Dynamic_programming;
+package Dynamic_programming.KNAPSACK;
 
 import java.util.Arrays;
 import java.util.Scanner;
