@@ -15,6 +15,9 @@ public class Cut_rod{
 
 		int ans2 = tabulation(arr);
 		System.out.println(ans2);
+
+		int ans3 = space_optimization(arr);
+		System.out.println(ans3);
 	}
 	/** Hint : HERE MAIN THING IS:-
 	 * index starts from 0 to n-1
@@ -68,6 +71,24 @@ public class Cut_rod{
 	}
 
 	public static int tabulation(int[] A){
+		int[][] dp = new int[A.length][A.length+1];
+		for(int len=0; len<=A.length; len++)
+			dp[0][len] = A[0]*len;
+
+		for(int idx = 1; idx<A.length; idx++){
+			for(int len=0; len<=A.length; len++){
+				int not_cut = dp[idx-1][len];
+				int rodlength = idx+1;
+				int cut = Integer.MIN_VALUE;
+				if(rodlength <= len)
+					cut = dp[idx][len-rodlength] + A[idx];
+				dp[idx][len] = Math.max(cut , not_cut);
+			}
+		}
+		return dp[A.length-1][A.length];
+	}
+	// Space Optimization
+	public static int space_optimization(int[] A){
 		int n = A.length;
 		int[] val = new int[n + 1];
 		val[0] = 0;

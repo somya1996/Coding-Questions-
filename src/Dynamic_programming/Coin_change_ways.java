@@ -26,11 +26,14 @@ public class Coin_change_ways {
 		if(money == 0){
 			return 1;
 		}
-		if(money < 0)
-			return 0;
+		//if(money < 0)
+		//	return 0;
 		if(index == 0)
 			return 0;
-		return recursive(arr , money-arr[index-1] , index) + recursive(arr , money , index-1);
+		if(arr[index - 1] <= money)
+			return recursive(arr , money-arr[index-1] , index) + recursive(arr , money , index-1);
+		else
+			return recursive(arr , money , index-1);
 	}
 
 	public static int tabulation(int[] coins , int money){
