@@ -1,4 +1,4 @@
-package Dynamic_programming;
+package Array.Hard_level;
 
 import java.util.ArrayList;
 import java.util.Arrays;
