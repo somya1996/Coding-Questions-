@@ -1,4 +1,4 @@
-package Dynamic_programming;
+package Dynamic_programming.Matrix_CHAIN_MULTIPLICATION_TYPE;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
