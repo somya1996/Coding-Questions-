@@ -3,7 +3,7 @@ package GRAPH;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Number_of_provinces {
+public class Number_of_provinces_using_BFS {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();

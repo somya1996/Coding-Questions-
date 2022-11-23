@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Path_in_Directed_Graph{
+public class Path_in_Directed_Graph_using_BFS {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int vertices = sc.nextInt();
