@@ -1,5 +1,4 @@
 package Sorting_Techniques.Medium;
-
 import java.util.Scanner;
 
 public class Merge_sort {
@@ -40,12 +39,13 @@ public class Merge_sort {
 	}
 	public static void mergeSort(int arr[], int l, int r)
 	{
-		if(l<r){
+		if(l>=r)
+			return;
+
 			int mid = (l+(r-1))/2;
 			mergeSort(arr , l , mid);
 			mergeSort(arr , mid+1 , r);
 			merge(arr , l , mid , r);
-		}
 
 	}
 }
